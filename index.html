@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gana la confianza del dragón y consigue la llave del castillo.">
+  <title>El Guardián del Castillo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="juego">
+    <h1>El Guardián del Castillo</h1>
+    <p class="meta">Convence al dragón de que te entregue la llave. ¡Con palabras!</p>
+    <section class="escena" aria-label="Estado del dragón">
+      <div id="dragon" class="dragon" aria-hidden="true">🐉</div>
+      <div class="barra" role="progressbar" aria-label="Confianza del dragón" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30">
+        <div id="confianza" class="barra-relleno"></div>
+      </div>
+      <p id="estado" class="estado">Confianza: 30 / 100</p>
+    </section>
+    <section id="chat" class="chat" aria-live="polite" aria-label="Conversación"></section>
+    <form id="formulario" class="formulario" autocomplete="off">
+      <input id="entrada" type="text" placeholder="Escribe tu mensaje al dragón..." maxlength="120" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="turnos" class="turnos"></p>
+  </main>
+  <script src="cerebro.js"></script>
+  <script src="juego.js"></script>
+</body>
+</html>
